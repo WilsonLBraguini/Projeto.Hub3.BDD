@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features/cenario_website.feature",
+		features = "src/test/resources/features/cenario_cucumber.feature",
 		glue = "br.com.rsinet.steps",
 		plugin = "pretty", monochrome = true,
 		snippets = SnippetType.CAMELCASE,
