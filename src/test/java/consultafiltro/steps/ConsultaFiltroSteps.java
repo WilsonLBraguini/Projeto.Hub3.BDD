@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import junit.framework.Assert;
 
 public class ConsultaFiltroSteps {
 	private WebDriver driver;
@@ -45,6 +46,7 @@ public class ConsultaFiltroSteps {
 	@When("^confirmo a pesquisa$")
 	public void confirmoAPesquisa() throws Throwable {
 		consultaPorFiltro.sendKeys(Keys.ENTER);
+		
 	}
 
 	@Then("^visualizo o produto procurado$")

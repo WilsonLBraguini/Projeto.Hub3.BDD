@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import junit.framework.Assert;
 
 public class ConsultaTelaSteps {
 	private WebDriver driver;
@@ -27,6 +28,8 @@ public class ConsultaTelaSteps {
 	@When("^seleciono um link especifico$")
 	public void selecionoUmLinkEspecifico() throws Throwable {
 		driver.findElement(By.id("tabletsImg")).click();
+		String texto = driver.findElement(By.xpath("/html/body/div[3]/section/article/div[2]/nav/a[2]")).getText();
+		Assert.assertEquals("TABLETS", texto);
 	}
 
 	@Then("^visualizo o produto selecionado$")

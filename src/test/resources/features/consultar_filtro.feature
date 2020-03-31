@@ -19,6 +19,6 @@ Scenario: Nao deve realizar consulta de produto inexistente
   Given que estou acessando a aplicacao
   When  seleciono o icone lupa
   And   abrir o campo para pesquisa
-  And   informo o produto "Bike"
+  And   informo o produto "BIKE"
   And   confirmo a pesquisa
   Then  sou notificado que nao existe resultado para pesquisa
