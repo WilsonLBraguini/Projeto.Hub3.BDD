@@ -1,3 +1,4 @@
+
 package br.com.rsinet.steps;
 
 import java.util.concurrent.TimeUnit;
@@ -29,12 +30,12 @@ public class RealizarLoginSteps {
 
 	@When("^informo o usuario \"([^\"]*)\"$")
 	public void informo_o_usuario(String arg1) throws Throwable {
-		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/sec-form/sec-view[1]/div/input")).sendKeys("Wilson");
+		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/sec-form/sec-view[1]/div/input")).sendKeys(arg1);
 	}
 
 	@When("^a senha \"([^\"]*)\"$")
 	public void a_senha(String arg1) throws Throwable {
-		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/sec-form/sec-view[2]/div/input")).sendKeys("Rsi12345");
+		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/sec-form/sec-view[2]/div/input")).sendKeys(arg1);
 	}
 
 	@When("^selecionar entrar$")
@@ -47,6 +48,11 @@ public class RealizarLoginSteps {
 		String texto = driver.findElement(By.linkText("Wilson")).getText();
 		Assert.assertEquals("Wilson", texto);
 		//driver.close();
+	}
+	
+	@Then("^sou notificado que usuario ou senha sao incorretos$")
+	public void souNotificadoQueUsuarioOuSenhaSaoIncorretos() throws Throwable {
+	    
 	}
 	
 	
