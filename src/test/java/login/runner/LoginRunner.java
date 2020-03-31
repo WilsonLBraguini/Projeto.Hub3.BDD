@@ -1,4 +1,4 @@
-package br.com.rsinet.runner;
+package login.runner;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/features/realizar_login.feature" ,
-		glue = "br.com.rsinet.steps",
+		glue = "login.steps",
 		tags = "~@ignore",
 		plugin = "pretty", monochrome = true,
 		snippets = SnippetType.CAMELCASE,
@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
         strict = false
         
 )
-public class Runner {
+public class LoginRunner {
 	
 
 

@@ -1,5 +1,5 @@
 
-package br.com.rsinet.steps;
+package login.steps;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +13,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class RealizarLoginSteps {
+public class LoginSteps {
 	private WebDriver driver;
 	
 	@Given("^que estou acessando a aplicacao$")
